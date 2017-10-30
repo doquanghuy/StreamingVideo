@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02D641A947DBD54D9FC64318 /* Pods_StreamingVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA3EA3B054E1589EFD0CBD9 /* Pods_StreamingVideo.framework */; };
 		6C57F9DF1FA77ED500EC5F2A /* StreamingVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57F9DE1FA77ED500EC5F2A /* StreamingVideoTests.swift */; };
 		6C57FA021FA7807800EC5F2A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA011FA7807800EC5F2A /* ListViewController.swift */; };
 		6C57FA041FA781E700EC5F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57F9EB1FA77FB300EC5F2A /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 		6C57FA1A1FA786B900EC5F2A /* SliderVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA191FA786B900EC5F2A /* SliderVideoView.swift */; };
 		6C57FA1D1FA7871900EC5F2A /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA1C1FA7871900EC5F2A /* ListCollectionViewCell.swift */; };
 		6C57FA1F1FA7875C00EC5F2A /* ListCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA1E1FA7875C00EC5F2A /* ListCollectionViewLayout.swift */; };
+		810C3C48AB0BE8AD4D90AEA1 /* Pods_StreamingVideoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFB0E80C159E958B21D3F0D /* Pods_StreamingVideoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10A074650B672E666C8C71A6 /* Pods-StreamingVideoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingVideoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingVideoTests/Pods-StreamingVideoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2CE50B498EF2FFBBEE8F0521 /* Pods-StreamingVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingVideo/Pods-StreamingVideo.debug.xcconfig"; sourceTree = "<group>"; };
+		5DD2D4189DD0E4C77B197129 /* Pods-StreamingVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingVideo/Pods-StreamingVideo.release.xcconfig"; sourceTree = "<group>"; };
 		6C57F9C31FA77ED500EC5F2A /* StreamingVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamingVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C57F9DA1FA77ED500EC5F2A /* StreamingVideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamingVideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C57F9DE1FA77ED500EC5F2A /* StreamingVideoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingVideoTests.swift; sourceTree = "<group>"; };
@@ -57,6 +62,9 @@
 		6C57FA191FA786B900EC5F2A /* SliderVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderVideoView.swift; sourceTree = "<group>"; };
 		6C57FA1C1FA7871900EC5F2A /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C57FA1E1FA7875C00EC5F2A /* ListCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewLayout.swift; sourceTree = "<group>"; };
+		DFA3EA3B054E1589EFD0CBD9 /* Pods_StreamingVideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingVideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFB0E80C159E958B21D3F0D /* Pods_StreamingVideoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingVideoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC45321E6B59800089E69E5D /* Pods-StreamingVideoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingVideoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingVideoTests/Pods-StreamingVideoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D641A947DBD54D9FC64318 /* Pods_StreamingVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,18 +80,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810C3C48AB0BE8AD4D90AEA1 /* Pods_StreamingVideoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53136EEE3B061FFABC61BA79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CE50B498EF2FFBBEE8F0521 /* Pods-StreamingVideo.debug.xcconfig */,
+				5DD2D4189DD0E4C77B197129 /* Pods-StreamingVideo.release.xcconfig */,
+				10A074650B672E666C8C71A6 /* Pods-StreamingVideoTests.debug.xcconfig */,
+				FC45321E6B59800089E69E5D /* Pods-StreamingVideoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6C57F9BA1FA77ED500EC5F2A = {
 			isa = PBXGroup;
 			children = (
 				6C57F9E91FA77FB300EC5F2A /* StreamingVideo */,
 				6C57F9DD1FA77ED500EC5F2A /* StreamingVideoTests */,
 				6C57F9C41FA77ED500EC5F2A /* Products */,
+				53136EEE3B061FFABC61BA79 /* Pods */,
+				C33CB6E4497E2D4536CFEF95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -279,6 +302,15 @@
 			path = FlowLayout;
 			sourceTree = "<group>";
 		};
+		C33CB6E4497E2D4536CFEF95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFA3EA3B054E1589EFD0CBD9 /* Pods_StreamingVideo.framework */,
+				EAFB0E80C159E958B21D3F0D /* Pods_StreamingVideoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,9 +318,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C57F9E31FA77ED500EC5F2A /* Build configuration list for PBXNativeTarget "StreamingVideo" */;
 			buildPhases = (
+				75E769D961043F01B57F4CB6 /* [CP] Check Pods Manifest.lock */,
 				6C57F9BF1FA77ED500EC5F2A /* Sources */,
 				6C57F9C01FA77ED500EC5F2A /* Frameworks */,
 				6C57F9C11FA77ED500EC5F2A /* Resources */,
+				A7DBC0613A3BBF18DD1CBA6B /* [CP] Embed Pods Frameworks */,
+				1CBB968F27CE85B78B730E04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,9 +338,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C57F9E61FA77ED500EC5F2A /* Build configuration list for PBXNativeTarget "StreamingVideoTests" */;
 			buildPhases = (
+				0B5771354E99BFC942BE78DC /* [CP] Check Pods Manifest.lock */,
 				6C57F9D61FA77ED500EC5F2A /* Sources */,
 				6C57F9D71FA77ED500EC5F2A /* Frameworks */,
 				6C57F9D81FA77ED500EC5F2A /* Resources */,
+				C1B3F454C661169A0D9FCA25 /* [CP] Embed Pods Frameworks */,
+				EE4EE90F526AFE735F060828 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,6 +416,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B5771354E99BFC942BE78DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1CBB968F27CE85B78B730E04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingVideo/Pods-StreamingVideo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75E769D961043F01B57F4CB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7DBC0613A3BBF18DD1CBA6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingVideo/Pods-StreamingVideo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1B3F454C661169A0D9FCA25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingVideoTests/Pods-StreamingVideoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE4EE90F526AFE735F060828 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingVideoTests/Pods-StreamingVideoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C57F9BF1FA77ED500EC5F2A /* Sources */ = {
@@ -546,6 +677,7 @@
 		};
 		6C57F9E41FA77ED500EC5F2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CE50B498EF2FFBBEE8F0521 /* Pods-StreamingVideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -563,6 +695,7 @@
 		};
 		6C57F9E51FA77ED500EC5F2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DD2D4189DD0E4C77B197129 /* Pods-StreamingVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -579,6 +712,7 @@
 		};
 		6C57F9E71FA77ED500EC5F2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10A074650B672E666C8C71A6 /* Pods-StreamingVideoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -596,6 +730,7 @@
 		};
 		6C57F9E81FA77ED500EC5F2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC45321E6B59800089E69E5D /* Pods-StreamingVideoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
