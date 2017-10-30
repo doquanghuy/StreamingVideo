@@ -7,6 +7,7 @@ target 'StreamingVideo' do
 
   # Pods for StreamingVideo
   pod 'Alamofire', '~> 4.5'
+  pod 'SwiftyJSON', '4.0.0-alpha.1'
 
   target 'StreamingVideoTests' do
     inherit! :search_paths
