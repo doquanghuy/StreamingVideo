@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C57F9C71FA77ED500EC5F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57F9C61FA77ED500EC5F2A /* AppDelegate.swift */; };
-		6C57F9C91FA77ED500EC5F2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57F9C81FA77ED500EC5F2A /* ViewController.swift */; };
-		6C57F9CC1FA77ED500EC5F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C57F9CA1FA77ED500EC5F2A /* Main.storyboard */; };
-		6C57F9CF1FA77ED500EC5F2A /* StreamingVideo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C57F9CD1FA77ED500EC5F2A /* StreamingVideo.xcdatamodeld */; };
-		6C57F9D11FA77ED500EC5F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C57F9D01FA77ED500EC5F2A /* Assets.xcassets */; };
-		6C57F9D41FA77ED500EC5F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C57F9D21FA77ED500EC5F2A /* LaunchScreen.storyboard */; };
 		6C57F9DF1FA77ED500EC5F2A /* StreamingVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57F9DE1FA77ED500EC5F2A /* StreamingVideoTests.swift */; };
+		6C57FA021FA7807800EC5F2A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA011FA7807800EC5F2A /* ListViewController.swift */; };
+		6C57FA041FA781E700EC5F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57F9EB1FA77FB300EC5F2A /* AppDelegate.swift */; };
+		6C57FA051FA781F200EC5F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C57F9FB1FA77FB300EC5F2A /* LaunchScreen.storyboard */; };
+		6C57FA061FA781F600EC5F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C57F9FD1FA77FB300EC5F2A /* Main.storyboard */; };
+		6C57FA071FA781FC00EC5F2A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C57F9F71FA77FB300EC5F2A /* Info.plist */; };
+		6C57FA081FA7820000EC5F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C57F9F51FA77FB300EC5F2A /* Assets.xcassets */; };
+		6C57FA091FA7820700EC5F2A /* StreamingVideo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C57F9F11FA77FB300EC5F2A /* StreamingVideo.xcdatamodeld */; };
+		6C57FA0C1FA783FD00EC5F2A /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA0B1FA783FD00EC5F2A /* BaseNetwork.swift */; };
+		6C57FA0E1FA7841700EC5F2A /* Network+List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA0D1FA7841700EC5F2A /* Network+List.swift */; };
+		6C57FA111FA7849C00EC5F2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA101FA7849C00EC5F2A /* Constants.swift */; };
+		6C57FA141FA784E900EC5F2A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA131FA784E900EC5F2A /* Configuration.swift */; };
+		6C57FA161FA7851D00EC5F2A /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA151FA7851D00EC5F2A /* ListViewModel.swift */; };
+		6C57FA181FA7869000EC5F2A /* ControlVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA171FA7869000EC5F2A /* ControlVideoView.swift */; };
+		6C57FA1A1FA786B900EC5F2A /* SliderVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA191FA786B900EC5F2A /* SliderVideoView.swift */; };
+		6C57FA1D1FA7871900EC5F2A /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA1C1FA7871900EC5F2A /* ListCollectionViewCell.swift */; };
+		6C57FA1F1FA7875C00EC5F2A /* ListCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57FA1E1FA7875C00EC5F2A /* ListCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,16 +38,25 @@
 
 /* Begin PBXFileReference section */
 		6C57F9C31FA77ED500EC5F2A /* StreamingVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamingVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C57F9C61FA77ED500EC5F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C57F9C81FA77ED500EC5F2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6C57F9CB1FA77ED500EC5F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6C57F9CE1FA77ED500EC5F2A /* StreamingVideo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StreamingVideo.xcdatamodel; sourceTree = "<group>"; };
-		6C57F9D01FA77ED500EC5F2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6C57F9D31FA77ED500EC5F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6C57F9D51FA77ED500EC5F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C57F9DA1FA77ED500EC5F2A /* StreamingVideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamingVideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C57F9DE1FA77ED500EC5F2A /* StreamingVideoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingVideoTests.swift; sourceTree = "<group>"; };
 		6C57F9E01FA77ED500EC5F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C57F9EB1FA77FB300EC5F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C57F9F21FA77FB300EC5F2A /* StreamingVideo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StreamingVideo.xcdatamodel; sourceTree = "<group>"; };
+		6C57F9F51FA77FB300EC5F2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C57F9F71FA77FB300EC5F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C57F9FC1FA77FB300EC5F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C57F9FE1FA77FB300EC5F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C57FA011FA7807800EC5F2A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		6C57FA0B1FA783FD00EC5F2A /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
+		6C57FA0D1FA7841700EC5F2A /* Network+List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+List.swift"; sourceTree = "<group>"; };
+		6C57FA101FA7849C00EC5F2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6C57FA131FA784E900EC5F2A /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		6C57FA151FA7851D00EC5F2A /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		6C57FA171FA7869000EC5F2A /* ControlVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlVideoView.swift; sourceTree = "<group>"; };
+		6C57FA191FA786B900EC5F2A /* SliderVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderVideoView.swift; sourceTree = "<group>"; };
+		6C57FA1C1FA7871900EC5F2A /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		6C57FA1E1FA7875C00EC5F2A /* ListCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +80,7 @@
 		6C57F9BA1FA77ED500EC5F2A = {
 			isa = PBXGroup;
 			children = (
-				6C57F9C51FA77ED500EC5F2A /* StreamingVideo */,
+				6C57F9E91FA77FB300EC5F2A /* StreamingVideo */,
 				6C57F9DD1FA77ED500EC5F2A /* StreamingVideoTests */,
 				6C57F9C41FA77ED500EC5F2A /* Products */,
 			);
@@ -76,20 +95,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6C57F9C51FA77ED500EC5F2A /* StreamingVideo */ = {
-			isa = PBXGroup;
-			children = (
-				6C57F9C61FA77ED500EC5F2A /* AppDelegate.swift */,
-				6C57F9C81FA77ED500EC5F2A /* ViewController.swift */,
-				6C57F9CA1FA77ED500EC5F2A /* Main.storyboard */,
-				6C57F9D01FA77ED500EC5F2A /* Assets.xcassets */,
-				6C57F9D21FA77ED500EC5F2A /* LaunchScreen.storyboard */,
-				6C57F9D51FA77ED500EC5F2A /* Info.plist */,
-				6C57F9CD1FA77ED500EC5F2A /* StreamingVideo.xcdatamodeld */,
-			);
-			path = StreamingVideo;
-			sourceTree = "<group>";
-		};
 		6C57F9DD1FA77ED500EC5F2A /* StreamingVideoTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +102,181 @@
 				6C57F9E01FA77ED500EC5F2A /* Info.plist */,
 			);
 			path = StreamingVideoTests;
+			sourceTree = "<group>";
+		};
+		6C57F9E91FA77FB300EC5F2A /* StreamingVideo */ = {
+			isa = PBXGroup;
+			children = (
+				6C57F9EA1FA77FB300EC5F2A /* AppDelegate */,
+				6C57F9EC1FA77FB300EC5F2A /* Helper */,
+				6C57FA0A1FA783A900EC5F2A /* Networking */,
+				6C57F9EF1FA77FB300EC5F2A /* Model */,
+				6C57F9F81FA77FB300EC5F2A /* View */,
+				6C57F9FF1FA77FB300EC5F2A /* ViewModel */,
+				6C57F9F31FA77FB300EC5F2A /* Resource */,
+			);
+			path = StreamingVideo;
+			sourceTree = "<group>";
+		};
+		6C57F9EA1FA77FB300EC5F2A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6C57F9EB1FA77FB300EC5F2A /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6C57F9EC1FA77FB300EC5F2A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA121FA784DC00EC5F2A /* Configuration */,
+				6C57F9ED1FA77FB300EC5F2A /* Constants */,
+				6C57F9EE1FA77FB300EC5F2A /* Extension */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6C57F9ED1FA77FB300EC5F2A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA101FA7849C00EC5F2A /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		6C57F9EE1FA77FB300EC5F2A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6C57F9EF1FA77FB300EC5F2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA0F1FA7843700EC5F2A /* CustomModel */,
+				6C57F9F01FA77FB300EC5F2A /* XCDataModeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C57F9F01FA77FB300EC5F2A /* XCDataModeld */ = {
+			isa = PBXGroup;
+			children = (
+				6C57F9F11FA77FB300EC5F2A /* StreamingVideo.xcdatamodeld */,
+			);
+			path = XCDataModeld;
+			sourceTree = "<group>";
+		};
+		6C57F9F31FA77FB300EC5F2A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6C57F9F41FA77FB300EC5F2A /* Images */,
+				6C57F9F61FA77FB300EC5F2A /* Info */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6C57F9F41FA77FB300EC5F2A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6C57F9F51FA77FB300EC5F2A /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		6C57F9F61FA77FB300EC5F2A /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				6C57F9F71FA77FB300EC5F2A /* Info.plist */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		6C57F9F81FA77FB300EC5F2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA001FA7804700EC5F2A /* ViewController */,
+				6C57FA1B1FA786F500EC5F2A /* CollectionViewCells */,
+				6C57F9F91FA77FB300EC5F2A /* CustomView */,
+				6C57F9FA1FA77FB300EC5F2A /* Storyboard */,
+				6C57FA201FA7876800EC5F2A /* FlowLayout */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C57F9F91FA77FB300EC5F2A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA171FA7869000EC5F2A /* ControlVideoView.swift */,
+				6C57FA191FA786B900EC5F2A /* SliderVideoView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		6C57F9FA1FA77FB300EC5F2A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6C57F9FB1FA77FB300EC5F2A /* LaunchScreen.storyboard */,
+				6C57F9FD1FA77FB300EC5F2A /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6C57F9FF1FA77FB300EC5F2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA151FA7851D00EC5F2A /* ListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6C57FA001FA7804700EC5F2A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA011FA7807800EC5F2A /* ListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6C57FA0A1FA783A900EC5F2A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA0B1FA783FD00EC5F2A /* BaseNetwork.swift */,
+				6C57FA0D1FA7841700EC5F2A /* Network+List.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6C57FA0F1FA7843700EC5F2A /* CustomModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomModel;
+			sourceTree = "<group>";
+		};
+		6C57FA121FA784DC00EC5F2A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA131FA784E900EC5F2A /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		6C57FA1B1FA786F500EC5F2A /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA1C1FA7871900EC5F2A /* ListCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		6C57FA201FA7876800EC5F2A /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6C57FA1E1FA7875C00EC5F2A /* ListCollectionViewLayout.swift */,
+			);
+			path = FlowLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +329,7 @@
 				TargetAttributes = {
 					6C57F9C21FA77ED500EC5F2A = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					6C57F9D91FA77ED500EC5F2A = {
@@ -182,9 +363,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C57F9D41FA77ED500EC5F2A /* LaunchScreen.storyboard in Resources */,
-				6C57F9D11FA77ED500EC5F2A /* Assets.xcassets in Resources */,
-				6C57F9CC1FA77ED500EC5F2A /* Main.storyboard in Resources */,
+				6C57FA051FA781F200EC5F2A /* LaunchScreen.storyboard in Resources */,
+				6C57FA061FA781F600EC5F2A /* Main.storyboard in Resources */,
+				6C57FA081FA7820000EC5F2A /* Assets.xcassets in Resources */,
+				6C57FA071FA781FC00EC5F2A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,9 +384,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C57F9C91FA77ED500EC5F2A /* ViewController.swift in Sources */,
-				6C57F9C71FA77ED500EC5F2A /* AppDelegate.swift in Sources */,
-				6C57F9CF1FA77ED500EC5F2A /* StreamingVideo.xcdatamodeld in Sources */,
+				6C57FA1D1FA7871900EC5F2A /* ListCollectionViewCell.swift in Sources */,
+				6C57FA041FA781E700EC5F2A /* AppDelegate.swift in Sources */,
+				6C57FA0C1FA783FD00EC5F2A /* BaseNetwork.swift in Sources */,
+				6C57FA141FA784E900EC5F2A /* Configuration.swift in Sources */,
+				6C57FA1A1FA786B900EC5F2A /* SliderVideoView.swift in Sources */,
+				6C57FA021FA7807800EC5F2A /* ListViewController.swift in Sources */,
+				6C57FA1F1FA7875C00EC5F2A /* ListCollectionViewLayout.swift in Sources */,
+				6C57FA091FA7820700EC5F2A /* StreamingVideo.xcdatamodeld in Sources */,
+				6C57FA0E1FA7841700EC5F2A /* Network+List.swift in Sources */,
+				6C57FA181FA7869000EC5F2A /* ControlVideoView.swift in Sources */,
+				6C57FA161FA7851D00EC5F2A /* ListViewModel.swift in Sources */,
+				6C57FA111FA7849C00EC5F2A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,20 +418,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6C57F9CA1FA77ED500EC5F2A /* Main.storyboard */ = {
+		6C57F9FB1FA77FB300EC5F2A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6C57F9CB1FA77ED500EC5F2A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6C57F9D21FA77ED500EC5F2A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C57F9D31FA77ED500EC5F2A /* Base */,
+				6C57F9FC1FA77FB300EC5F2A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6C57F9FD1FA77FB300EC5F2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C57F9FE1FA77FB300EC5F2A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -357,14 +548,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ESZLRY25L;
-				INFOPLIST_FILE = StreamingVideo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StreamingVideoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.framgia.StreamingVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -372,14 +565,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ESZLRY25L;
-				INFOPLIST_FILE = StreamingVideo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StreamingVideoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.framgia.StreamingVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -450,12 +644,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6C57F9CD1FA77ED500EC5F2A /* StreamingVideo.xcdatamodeld */ = {
+		6C57F9F11FA77FB300EC5F2A /* StreamingVideo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6C57F9CE1FA77ED500EC5F2A /* StreamingVideo.xcdatamodel */,
+				6C57F9F21FA77FB300EC5F2A /* StreamingVideo.xcdatamodel */,
 			);
-			currentVersion = 6C57F9CE1FA77ED500EC5F2A /* StreamingVideo.xcdatamodel */;
+			currentVersion = 6C57F9F21FA77FB300EC5F2A /* StreamingVideo.xcdatamodel */;
 			path = StreamingVideo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
