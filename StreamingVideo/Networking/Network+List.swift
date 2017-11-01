@@ -7,4 +7,13 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
+extension BaseNetwork {
+    struct List {
+        static func getListVideos(url: URL, completion: ((_ error: Error?, _ json: JSON?) -> Void)? = nil) -> DataRequest? {
+            return BaseNetwork.request(url: url, completion: completion)
+        }
+    }
+}

@@ -7,7 +7,19 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ListCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    func configure(with video: Video) {
+        let placeHolderImg = UIImage(named: "")
+        if let urlStr = video.backgroundImageURL, let url = URL(string: urlStr) {
+            self.imgView.af_setImage(withURL: url, placeholderImage: placeHolderImg)
+        } else {
+            self.imgView.image = placeHolderImg
+        }
+        self.nameLabel.text = video.name
+    }
 }

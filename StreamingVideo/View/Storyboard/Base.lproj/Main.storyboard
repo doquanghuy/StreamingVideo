@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="VXe-dq-Van">
@@ -37,12 +42,49 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yVW-a3-AkW">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="252" height="224"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCollectionViewCell" id="YC0-fU-Ne5" customClass="ListCollectionViewCell" customModule="StreamingVideo">
+                                        <rect key="frame" x="61.5" y="0.0" width="252" height="224"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="252" height="224"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-tL-O5z">
+                                                    <rect key="frame" x="0.0" y="0.0" width="252" height="224"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1a-Bt-gmu">
+                                                    <rect key="frame" x="20" y="184" width="212" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="e1a-Bt-gmu" secondAttribute="bottom" constant="20" id="ARm-ev-6Tu"/>
+                                            <constraint firstItem="bVu-tL-O5z" firstAttribute="leading" secondItem="YC0-fU-Ne5" secondAttribute="leading" id="DRE-wb-u57"/>
+                                            <constraint firstItem="bVu-tL-O5z" firstAttribute="top" secondItem="YC0-fU-Ne5" secondAttribute="top" id="HhV-60-j2p"/>
+                                            <constraint firstAttribute="trailing" secondItem="bVu-tL-O5z" secondAttribute="trailing" id="TFI-QD-hjZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="e1a-Bt-gmu" secondAttribute="trailing" constant="20" id="bhs-iQ-K9D"/>
+                                            <constraint firstAttribute="bottom" secondItem="bVu-tL-O5z" secondAttribute="bottom" id="qAM-4H-FuK"/>
+                                            <constraint firstItem="e1a-Bt-gmu" firstAttribute="leading" secondItem="YC0-fU-Ne5" secondAttribute="leading" constant="20" id="tqU-gF-ozB"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imgView" destination="bVu-tL-O5z" id="v32-bZ-qnT"/>
+                                            <outlet property="nameLabel" destination="e1a-Bt-gmu" id="94q-16-wNn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="srG-kk-4Pl" id="Reh-pR-wwn"/>
+                                    <outlet property="delegate" destination="srG-kk-4Pl" id="bGW-6P-NTa"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,10 +97,13 @@
                         <viewLayoutGuide key="safeArea" id="9Lo-ix-78j"/>
                     </view>
                     <navigationItem key="navigationItem" id="isZ-nv-43m"/>
+                    <connections>
+                        <outlet property="collectionView" destination="XKV-kA-I2A" id="YDE-kx-cfK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNd-cu-05B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-328" y="251"/>
+            <point key="canvasLocation" x="-328.80000000000001" y="250.52473763118442"/>
         </scene>
     </scenes>
 </document>
