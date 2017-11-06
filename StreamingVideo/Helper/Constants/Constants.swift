@@ -14,6 +14,11 @@ struct Constants {
     }
     
     struct Image {
-        
+        static let play = "ic-play"
+        static let pause = "ic-pause"
+    }
+    
+    struct Segue {
+        static let showDetailVideoViewController = "showDetailVideoViewController"
     }
 }

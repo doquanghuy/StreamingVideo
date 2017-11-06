@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayVideoViewOwner" customModule="StreamingVideo">
+            <connections>
+                <outlet property="playVideoView" destination="iN0-l3-epB" id="Hcx-jm-xRR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayVideoView" customModule="StreamingVideo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aI-oZ-swf">
+                    <rect key="frame" x="112" y="65" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="ic-play"/>
+                    <connections>
+                        <action selector="playOrPause:" destination="iN0-l3-epB" eventType="touchUpInside" id="hk6-cy-8Vw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0aI-oZ-swf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GI6-My-3Qo"/>
+                <constraint firstItem="0aI-oZ-swf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="k5J-BY-cp9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="playButton" destination="0aI-oZ-swf" id="jkU-s7-LDd"/>
+            </connections>
+            <point key="canvasLocation" x="299.5" y="107"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-play" width="50" height="50"/>
+    </resources>
+</document>
