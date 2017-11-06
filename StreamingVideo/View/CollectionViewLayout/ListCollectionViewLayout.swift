@@ -34,7 +34,6 @@ class ListCollectionViewLayout: UICollectionViewLayout {
             let indexPath = IndexPath(row: index, section: 0)
             let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attribute.frame = self.position(at: index)
-            print(attribute.frame)
             attributes[indexPath] = attribute
         }
     }

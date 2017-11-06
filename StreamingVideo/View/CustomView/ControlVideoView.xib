@@ -30,7 +30,7 @@
                     <rect key="frame" x="261" y="0.0" width="87" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytR-BH-bF5">
-                            <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="ytR-BH-bF5" secondAttribute="height" multiplier="1:1" id="YIS-Og-E5S"/>
@@ -41,7 +41,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEW-SD-oV8">
-                            <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                            <rect key="frame" x="57" y="0.0" width="30" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="QEW-SD-oV8" secondAttribute="height" id="4i5-WE-MIY"/>
@@ -86,6 +86,11 @@
                             <rect key="frame" x="59" y="7.5" width="251" height="31"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.98671859500000003" green="0.31506091359999999" blue="0.3019025326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="processWhenSliderTouchDown:" destination="iN0-l3-epB" eventType="touchDown" id="WdP-4q-Byh"/>
+                                <action selector="processWhenSliderTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="XY6-NM-lLU"/>
+                                <action selector="processWhenSliderTouchUpOutside:" destination="iN0-l3-epB" eventType="touchUpOutside" id="gCY-Ic-ahe"/>
+                            </connections>
                         </slider>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -112,31 +117,49 @@
                         <action selector="playOrPause:" destination="iN0-l3-epB" eventType="touchUpInside" id="Q5o-l3-8wJ"/>
                     </connections>
                 </button>
+                <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-Cv-qH7">
+                    <rect key="frame" x="261" y="50" width="87" height="2"/>
+                    <color key="tintColor" red="0.98671859500000003" green="0.31506091359999999" blue="0.3019025326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </progressView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7S-vl-nRK">
+                    <rect key="frame" x="261" y="51" width="87" height="0.0"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="YZY-Cv-qH7" firstAttribute="trailing" secondItem="UaN-aa-BpN" secondAttribute="trailing" id="0D6-fE-8JP"/>
                 <constraint firstItem="lFE-FM-2bZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4Kw-Bo-iJe"/>
                 <constraint firstItem="UaN-aa-BpN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/4" id="5ls-71-365"/>
+                <constraint firstItem="z7S-vl-nRK" firstAttribute="leading" secondItem="YZY-Cv-qH7" secondAttribute="leading" id="9eO-Fb-c9e"/>
+                <constraint firstItem="YZY-Cv-qH7" firstAttribute="centerY" secondItem="z7S-vl-nRK" secondAttribute="centerY" id="HQK-ye-H0Z"/>
+                <constraint firstItem="z7S-vl-nRK" firstAttribute="trailing" secondItem="YZY-Cv-qH7" secondAttribute="trailing" id="Hbf-oB-LiN"/>
+                <constraint firstItem="YZY-Cv-qH7" firstAttribute="top" secondItem="UaN-aa-BpN" secondAttribute="bottom" constant="20" id="QYs-iZ-KNb"/>
                 <constraint firstItem="lFE-FM-2bZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Qi6-L4-Y18"/>
                 <constraint firstItem="uyh-74-jPg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ZcJ-YH-M77"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uyh-74-jPg" secondAttribute="trailing" id="dum-X7-XNP"/>
                 <constraint firstItem="uyh-74-jPg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="foG-q1-17D"/>
                 <constraint firstItem="UaN-aa-BpN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="h9O-Ma-lVq"/>
                 <constraint firstItem="UaN-aa-BpN" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="qhH-MZ-OHC"/>
+                <constraint firstItem="YZY-Cv-qH7" firstAttribute="leading" secondItem="UaN-aa-BpN" secondAttribute="leading" id="uiK-cM-uss"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="bottomView" destination="uyh-74-jPg" id="9Cf-9q-1Lb"/>
+                <outlet property="completionLabel" destination="z7S-vl-nRK" id="fOh-Xo-1oA"/>
                 <outlet property="downloadButton" destination="QEW-SD-oV8" id="px5-Xl-3Iw"/>
                 <outlet property="leftTimeLabel" destination="Ehy-mM-SZb" id="VQB-c4-LhA"/>
                 <outlet property="loopButton" destination="ytR-BH-bF5" id="0lL-JE-2Pb"/>
                 <outlet property="playButton" destination="lFE-FM-2bZ" id="PU8-wZ-Asn"/>
+                <outlet property="progressView" destination="YZY-Cv-qH7" id="W0Q-ta-NQS"/>
                 <outlet property="rightTimeLabel" destination="m3j-1J-esJ" id="fsO-de-itM"/>
                 <outlet property="slider" destination="I06-we-YV4" id="2TI-PZ-6N2"/>
                 <outlet property="topView" destination="UaN-aa-BpN" id="xzm-sS-zhK"/>
             </connections>
-            <point key="canvasLocation" x="111" y="-469"/>
+            <point key="canvasLocation" x="278" y="-518"/>
         </view>
     </objects>
     <resources>

@@ -20,6 +20,10 @@ class ListViewController: UIViewController {
         setupData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     private func setupData() {
         viewModel = ListViewModel()
         viewModel?.result.bind(listener: { (result) in
@@ -74,24 +78,23 @@ extension ListViewController: UICollectionViewDataSource {
     }
 }
 
-extension ListViewController: UIScrollViewDelegate {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
-    }
-    
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        
-    }
-}
-
 extension ListViewController: ListCollectionViewCellDelegate {
     func clickCell(video: Video) {
+        let ableToPlay = video.localURL != nil || Conectivity.isConnectedToInternet
+        guard ableToPlay else {
+            let alert = UIAlertController(title: Constants.String.unableOpenDetailTitle, message: nil, preferredStyle: .alert)
+            let action = UIAlertAction(title: Constants.String.okButton, style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         self.performSegue(withIdentifier: Constants.Segue.showDetailVideoViewController, sender: video)
     }
 }
 
 extension ListViewController: DetailVideoViewControllerDelegate {
     func dismiss(animated: Bool) {
+        Configuration.Orientation.orientation = .portrait
         self.dismiss(animated: animated, completion: nil)
     }
 }

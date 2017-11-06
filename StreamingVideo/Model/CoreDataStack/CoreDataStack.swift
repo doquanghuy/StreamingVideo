@@ -12,6 +12,7 @@ import CoreData
 class CoreDataStack {
     private let modelName: String
     private let storeName: String = "StreamingVideo"
+    static let shared = CoreDataStack(modelName: "StreamingVideo")
     
     init(modelName: String) {
         self.modelName = modelName

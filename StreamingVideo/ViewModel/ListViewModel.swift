@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import CoreData
 
 enum FetchListVideoResult {
     case begin
@@ -34,6 +35,16 @@ class ListViewModel {
 
 extension ListViewModel: ListViewModelInterface {
     func fetchListVideos() {
+        Conectivity.isConnectedToInternet ? fetchVideoReachableNetwork() : fetchVideoOffline()
+    }
+    
+    private func fetchVideoOffline() {
+        let fetchRequest: NSFetchRequest<Video> = Video.fetchRequest()
+        self.videos = (try? CoreDataStack.shared.managedContext.fetch(fetchRequest)) ?? []
+        self.result.value = !self.videos.isEmpty ? .success : .error(nil)
+    }
+    
+    private func fetchVideoReachableNetwork() {
         guard let url = URL(string: Configuration.List.url) else {
             return
         }

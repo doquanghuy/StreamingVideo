@@ -25,8 +25,6 @@ class PlayVideoView: UIView, PlayControl {
     private weak var delegate: PlayControlOutput?
     private var isPlaying = false {
         didSet {
-            let imageName = isPlaying ? Constants.Image.pause : Constants.Image.play
-            self.playButton.setImage(UIImage(named: imageName), for: .normal)
             self.delegate?.playOrPause(isPlay: self.isPlaying)
         }
     }

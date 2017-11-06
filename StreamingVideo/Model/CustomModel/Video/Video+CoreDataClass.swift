@@ -17,18 +17,28 @@ public class Video: NSManagedObject {
     }
     
     static func createOrUpdateVideo(with json: JSON, context: NSManagedObjectContext? = nil) -> Video {
-        let manageObjContext = context ?? (UIApplication.shared.delegate as? AppDelegate)!.coreDataStack.managedContext
-        let newVideo = Video(context: manageObjContext)
-        newVideo.backgroundImageURL = json["background_image_url"].string
-        newVideo.id = json["id"].int32!
-        newVideo.streamURL = json["stream_url"].string
-        newVideo.offlineURL = json["offline_url"].string
-        newVideo.name = json["name"].string
-        return newVideo
+        let id =  json["id"].int32!
+        let manageObjContext = CoreDataStack.shared.managedContext
+        let video = self.video(with: id) ?? Video(context: manageObjContext)
+        
+        if let backgroundImageURL =  json["background_image_url"].string {
+            video.backgroundImageURL = backgroundImageURL
+        }
+        video.id = id
+        if let streamURL = json["stream_url"].string {
+            video.streamURL = streamURL
+        }
+        if let offlineURL = json["offline_url"].string {
+            video.offlineURL = offlineURL
+        }
+        if let name = json["name"].string {
+            video.name = name
+        }
+        return video
     }
     
     static func createOrUpdateMultiVideo(with json: JSON, context: NSManagedObjectContext? = nil) -> [Video] {
-        let manageObjContext = context ?? (UIApplication.shared.delegate as? AppDelegate)!.coreDataStack.managedContext
+        let manageObjContext = CoreDataStack.shared.managedContext
         var videos = [Video]()
         for json in json.arrayValue {
             let video = self.createOrUpdateVideo(with: json, context: manageObjContext)
@@ -40,5 +50,12 @@ public class Video: NSManagedObject {
             print(error.localizedDescription)
         }
         return videos
+    }
+    
+    static func video(with id: Int32) -> Video? {
+        let fetchRequest: NSFetchRequest<Video> = Video.fetchRequest()
+        let predicateID = NSPredicate(format: "id == %@", String(id))
+        fetchRequest.predicate = predicateID
+        return (try? CoreDataStack.shared.managedContext.fetch(fetchRequest).first) as? Video
     }
 }
