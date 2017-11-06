@@ -70,9 +70,10 @@ class DetailViewModel: DetailViewModelInterface {
     }
     
     private func processOffline() {
-        guard let urlString = video.localURL, let url = URL(string: urlString) else {
+        guard let urlString = video.localURL else {
             return
         }
+        let url = URL(fileURLWithPath: urlString)
         let avPlayer = AVPlayer(url: url)
         self.avPlayer.value = avPlayer
         self.processDuration(avPlayer: avPlayer)

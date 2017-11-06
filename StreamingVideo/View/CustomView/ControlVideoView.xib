@@ -123,7 +123,7 @@
                     <color key="tintColor" red="0.98671859500000003" green="0.31506091359999999" blue="0.3019025326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </progressView>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7S-vl-nRK">
-                    <rect key="frame" x="261" y="51" width="87" height="0.0"/>
+                    <rect key="frame" x="348" y="51" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -134,7 +134,6 @@
                 <constraint firstItem="YZY-Cv-qH7" firstAttribute="trailing" secondItem="UaN-aa-BpN" secondAttribute="trailing" id="0D6-fE-8JP"/>
                 <constraint firstItem="lFE-FM-2bZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4Kw-Bo-iJe"/>
                 <constraint firstItem="UaN-aa-BpN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/4" id="5ls-71-365"/>
-                <constraint firstItem="z7S-vl-nRK" firstAttribute="leading" secondItem="YZY-Cv-qH7" secondAttribute="leading" id="9eO-Fb-c9e"/>
                 <constraint firstItem="YZY-Cv-qH7" firstAttribute="centerY" secondItem="z7S-vl-nRK" secondAttribute="centerY" id="HQK-ye-H0Z"/>
                 <constraint firstItem="z7S-vl-nRK" firstAttribute="trailing" secondItem="YZY-Cv-qH7" secondAttribute="trailing" id="Hbf-oB-LiN"/>
                 <constraint firstItem="YZY-Cv-qH7" firstAttribute="top" secondItem="UaN-aa-BpN" secondAttribute="bottom" constant="20" id="QYs-iZ-KNb"/>
