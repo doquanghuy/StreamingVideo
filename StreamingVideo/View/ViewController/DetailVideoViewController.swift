@@ -21,41 +21,86 @@ class DetailVideoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupUI()
-        self.setupData()
+        Configuration.Orientation.orientation = UIInterfaceOrientationMask.allButUpsideDown
+        self.setup()
     }
     
-    private func setupUI() {
-        self.controlView = ControlVideoView.add(on: self.containerVideoView, delegate: self, animated: true) as! FullControl
+    override var shouldAutorotate: Bool {
+        return true
     }
     
-    private func setupData() {
-        viewModel.avPlayer.bind { (avPlayer) in
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .portrait
+    }
+        
+    private func setup() {
+        viewModel.avPlayer.bind {[weak self] (avPlayer) in
             let avPlayerVC = AVPlayerViewController()
             avPlayerVC.showsPlaybackControls = false
             avPlayerVC.player = avPlayer
             
-            //Add child vc
-            self.addChildViewController(avPlayerVC)
-            self.containerVideoView.addSubview(avPlayerVC.view)
+            //Add control view
+            self?.addChildViewController(avPlayerVC)
+            self?.containerVideoView.addSubview(avPlayerVC.view)
             avPlayerVC.view.translatesAutoresizingMaskIntoConstraints = false
             let views = ["avPlayerView": avPlayerVC.view] as [String: Any]
             let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[avPlayerView]-0-|", options: [], metrics: nil, views: views)
             let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[avPlayerView]-0-|", options: [], metrics: nil, views: views)
-            self.containerVideoView.addConstraints(horizontalConstraints)
-            self.containerVideoView.addConstraints(verticalConstraints)
-            self.view.layoutIfNeeded()
-            self.containerVideoView.bringSubview(toFront: self.controlView as! UIView)
+            self?.containerVideoView.addConstraints(horizontalConstraints)
+            self?.containerVideoView.addConstraints(verticalConstraints)
+            self?.view.layoutIfNeeded()
+            if let controlView = self?.controlView as? UIView {
+                self?.containerVideoView.bringSubview(toFront: controlView)
+            }
         }
-        viewModel.timePassed.bind {(timeStr, percent) in
-            self.controlView.setCurrentTime(to: timeStr)
-            self.controlView.setSlider(to: percent, animated: true)
+        viewModel.timePassed.bind {[weak self] (timeStr, percent) in
+            self?.controlView.setCurrentTime(to: timeStr)
+            self?.controlView.setSlider(to: percent, animated: true)
         }
-        viewModel.durationStr.bind { (duration) in
-            self.controlView.setTotalDuration(to: duration)
+        viewModel.durationStr.bind {[weak self] (duration) in
+            self?.controlView.setTotalDuration(to: duration)
         }
-        viewModel.didStartPlayVideo.bind { (didStart) in
-            self.controlView.changePlayButton(isPlay: didStart)
+        viewModel.loop.bind {[weak self](loop) in
+            self?.controlView.changeLoopButton(with: loop)
+        }
+        viewModel.state.bind {[weak self] (state) in
+            self?.controlView.changePlayButton(isPlay: state == .play)
+        }
+        viewModel.progress.bind {[weak self] (percent) in
+            self?.controlView.progressView(to: Float(percent))
+        }
+        viewModel.downloadComplete.bind {[weak self] (result) in
+            switch result {
+            case .complete(let error):
+                self?.controlView.completeLoading(with: error)
+                break
+            default:
+                break
+            }
+        }
+        viewModel.isOffline.bind {[weak self] (isOffline) in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.controlView = ControlVideoView.add(on: strongSelf.containerVideoView, delegate: strongSelf, animated: true, isOffline: isOffline) as! FullControl
+            strongSelf.containerVideoView.bringSubview(toFront: strongSelf.controlView as! UIView)
+        }
+        viewModel.fileExist.bind {[weak self] (isExisted) in
+            if isExisted {
+                let alert = UIAlertController(title: Constants.String.deleteTitle, message: nil, preferredStyle: .alert)
+                let cancelButton = UIAlertAction(title: Constants.String.cancelButton, style: .cancel, handler: nil)
+                let okButton = UIAlertAction(title: Constants.String.okButton, style: .default, handler: {(action) in
+                    self?.viewModel.deleteFile()
+                })
+                alert.addAction(cancelButton)
+                alert.addAction(okButton)
+                self?.present(alert, animated: true, completion: nil)
+            } else {
+                self?.viewModel.download()
+            }
+        }
+        viewModel.didDeleteFile.bind {[weak self] (didDeleteFile) in
+            self?.delegate?.dismiss(animated: true)
         }
         viewModel.process()
     }
@@ -67,18 +112,26 @@ class DetailVideoViewController: UIViewController {
 
 extension DetailVideoViewController: FullControlOutput {
     func download() {
-        
+        viewModel.checkFileExist()
     }
     
     func setLoop(type: Loop) {
+        viewModel.loop(with: type)
+    }
         
+    func sliderTouchUpInside(slider: UISlider) {
+        viewModel.endSliding(at: slider.value)
     }
     
-    func slide(to value: Float) {
-        
+    func sliderTouchUpOutside(slider: UISlider) {
+        viewModel.endSliding(at: slider.value)
+    }
+    
+    func sliderTouchDown(slider: UISlider) {
+        viewModel.beginSliding()
     }
     
     func playOrPause(isPlay: Bool) {
-        
+        isPlay ? self.viewModel.pause() : self.viewModel.play()
     }
 }
