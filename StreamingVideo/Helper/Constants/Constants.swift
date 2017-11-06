@@ -32,4 +32,8 @@ struct Constants {
     struct KeyPath {
         static let avPlayerStatus = "status"
     }
+    
+    struct NavigationTitle {
+        static let listViewController = "Videos"
+    }
 }

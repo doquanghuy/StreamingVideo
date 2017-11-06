@@ -40,6 +40,7 @@ class ListViewController: UIViewController {
     }
     
     private func setupUI() {
+        self.navigationItem.title = Constants.NavigationTitle.listViewController
         collectionView.collectionViewLayout = ListCollectionViewLayout()
     }
     

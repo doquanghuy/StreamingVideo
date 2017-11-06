@@ -19,8 +19,6 @@ extension BaseNetwork {
             return BaseNetwork.downloadAudioFromURL(urlString: urlString, fileName: fileName, completionProgress: { (percent) in
                 completionProgress?(percent)
             }) { (error, url) in
-                video.localURL = url?.absoluteString
-                CoreDataStack.shared.saveContext()
                 completion?(error, url)
             }
         }

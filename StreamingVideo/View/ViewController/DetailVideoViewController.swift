@@ -99,6 +99,9 @@ class DetailVideoViewController: UIViewController {
                 self?.viewModel.download()
             }
         }
+        viewModel.didDeleteFile.bind {[weak self] (didDeleteFile) in
+            self?.delegate?.dismiss(animated: true)
+        }
         viewModel.process()
     }
     

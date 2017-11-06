@@ -28,6 +28,7 @@ protocol DetailViewModelInterface {
     var downloadComplete: Dynamic<DownloadResult> {get set}
     var isOffline: Dynamic<Bool> {get set}
     var fileExist: Dynamic<Bool> {get set}
+    var didDeleteFile: Dynamic<Bool> {get set}
     
     func process()
     func play()
@@ -51,12 +52,14 @@ class DetailViewModel: DetailViewModelInterface {
     var downloadComplete: Dynamic<DownloadResult> = Dynamic<DownloadResult>(.none)
     var isOffline: Dynamic<Bool> = Dynamic<Bool>(false)
     var fileExist: Dynamic<Bool> = Dynamic<Bool>(false)
+    var didDeleteFile: Dynamic<Bool> = Dynamic<Bool>(false)
     
     private var duration: Float = 0.0
     private var timeObserver: Any?
     private var loopType = Loop.none
     private var loopCount = 0
     private var request: DownloadRequest?
+    private var isDownloading = false
     
     init(video: Video) {
         self.video = video
@@ -138,10 +141,17 @@ class DetailViewModel: DetailViewModelInterface {
     }
     
     func download() {
+        guard !isDownloading else {
+            return
+        }
+        self.isDownloading = true
         self.request = BaseNetwork.Detail.download(video: video, completionProgress: {[weak self] (percent) in
             self?.progress.value = percent
         }) {[weak self] (error, url) in
+            self?.video.localURL = url?.path
+            CoreDataStack.shared.saveContext()
             self?.downloadComplete.value = .complete(error)
+            self?.isDownloading = false
         }
     }
     
@@ -150,6 +160,7 @@ class DetailViewModel: DetailViewModelInterface {
             return
         }
         FileManager.default.deleteFile(at: path)
+        self.didDeleteFile.value = true
     }
     
     func checkFileExist(){
