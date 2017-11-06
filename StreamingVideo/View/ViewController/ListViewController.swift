@@ -47,6 +47,15 @@ class ListViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segue.showDetailVideoViewController {
+            let detailModel = DetailViewModel(video: sender as! Video)
+            let detailVC = segue.destination as? DetailVideoViewController
+            detailVC?.delegate = self
+            detailVC?.viewModel = detailModel
+        }
+    }
+    
     deinit {
         self.viewModel.cancelRequest()
     }
@@ -60,6 +69,7 @@ extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ListCollectionViewCell.self), for: indexPath) as! ListCollectionViewCell
         cell.configure(with: self.viewModel.video(at: indexPath))
+        cell.delegate = self
         return cell
     }
 }
@@ -71,5 +81,17 @@ extension ListViewController: UIScrollViewDelegate {
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         
+    }
+}
+
+extension ListViewController: ListCollectionViewCellDelegate {
+    func clickCell(video: Video) {
+        self.performSegue(withIdentifier: Constants.Segue.showDetailVideoViewController, sender: video)
+    }
+}
+
+extension ListViewController: DetailVideoViewControllerDelegate {
+    func dismiss(animated: Bool) {
+        self.dismiss(animated: animated, completion: nil)
     }
 }
