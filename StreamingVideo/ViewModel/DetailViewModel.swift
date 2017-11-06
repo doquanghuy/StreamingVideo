@@ -110,8 +110,10 @@ class DetailViewModel: DetailViewModelInterface {
     }
     
     private func stopObserver() {
-        self.avPlayer.value?.removeTimeObserver(self.timeObserver!)
-        self.timeObserver = nil
+        if timeObserver != nil {
+            self.avPlayer.value?.removeTimeObserver(self.timeObserver!)
+            self.timeObserver = nil
+        }
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -161,6 +163,8 @@ class DetailViewModel: DetailViewModelInterface {
         }
         FileManager.default.deleteFile(at: path)
         self.didDeleteFile.value = true
+        self.video.localURL = nil
+        CoreDataStack.shared.saveContext()
     }
     
     func checkFileExist(){
