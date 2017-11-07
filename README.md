@@ -23,3 +23,8 @@
 
 *  If no local file existed, when you click download button, application will display a progress view to display the percentage dowloading. When downloading successfully, the progress view will be hidden, and a label will appear with content "Download successfully" or display a error.
     
+### Requirements ###
+* iOS 10.0 or later and Swift 4.0 are required.
+* Only for iPhone to have best user experiences
+
+
